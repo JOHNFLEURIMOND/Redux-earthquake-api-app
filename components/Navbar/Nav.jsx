@@ -36,12 +36,7 @@ const Navbar = () => {
                             <MenuItem>
                                 <MenuLink onClick={handleClick} to="/">Home</MenuLink>
                             </MenuItem>
-                            <MenuItem>
-                                <MenuLink onClick={handleClick} to="/CinematographyPage">Film</MenuLink>
-                            </MenuItem>
-                            <MenuItem>
-                                <MenuLink onClick={handleClick} to="/PhotographyPage">Photos</MenuLink>
-                            </MenuItem>
+
                         </Menu>
 
                     </NavbarContainer>
