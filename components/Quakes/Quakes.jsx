@@ -8,11 +8,8 @@ import {
     NameFieldset,
 } from "../Card/index";
 import { connect } from "react-redux";
-
 import store from "../store";
-
 import { action } from "../modules/actions";
-
 import {
     ExperienceContainer,
     Title,
@@ -20,14 +17,13 @@ import {
 } from "./index";
 
 const Quakes = (props) => {
-
     const { quakes } = props;
+    const [card, flipCard] = useState(false);
 
     if (quakes.length <= 0) {
         return null;
     }
 
-    const [card, flipCard] = useState(false);
     return (
         <ExperienceContainer>
             <Title>
@@ -47,7 +43,6 @@ const Quakes = (props) => {
                         properties: { detail, title, mag, type, alert, tsunami },
                     } = quake;
                     return card ? (
-
                         <Card>
                             <CardBody
                                 onClick={() => flipCard(false)}

@@ -38,8 +38,6 @@ const Navbar = () => {
                             </MenuItem>
                         </Menu>
                     </NavbarContainer>
-
-
                 </Nav>
     )
 }
