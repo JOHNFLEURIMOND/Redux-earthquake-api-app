@@ -1,11 +1,7 @@
 # :checkered_flag:What It Looks Like :checkered_flag:: 
-
+https://redux-earthquake-app.netlify.app
 # How It's Made :nut_and_bolt:🔨 :hammer::wrench::
  This application built with React.js, Redux, Webpack.
-
-## Optimizations.
-This is just a basic template layout to start my fullstack apps
-https://redux-earthquake-app.netlify.app
 
  # How It's Works:white_check_mark::
 1.) The client side sends a request to the backend server.
