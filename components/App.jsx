@@ -1,40 +1,27 @@
-import React from 'react';
-import Nav from '../components/Navbar/Nav.jsx';
-import Footer from '../components/Footer/Footer';
-import MainHero from '../components/MainHero/MainHero';
-import Quakes from './Quakes/Quakes.jsx';
-import {
-  Link, Route, BrowserRouter as Router, Switch
-} from 'react-router-dom';
-import store from "./store";
-import { Provider } from "react-redux";
-import { connect } from "react-redux";
-import { GlobalStyle, Container } from '../components/layout/global-style';
+import React from "react";
+import GlobalStyle from "./layout/global-style"; // Ensure this path is correct
+import Nav from "./Navbar/Nav.jsx"; // Ensure this path is correct
+import Footer from "./Footer/Footer.jsx"; // Ensure this path is correct
+import MainHero from "./MainHero/MainHero.jsx"; // Ensure this path is correct
+import Quakes from "./Quakes/Quakes.jsx"; // Ensure this path is correct
+import { EarthquakeProvider } from "./Quakes/EarthquakeContext"; // Ensure this path is correct
 
-const Homepage = (props) => {
-
-  return (
-    <div>
-    <Provider store={store}>
-      <Container>
-        <GlobalStyle />
-        <Nav />
-        <MainHero />
-        <Quakes />
-        <Footer />
-      </Container>
-    </Provider>
-    </div>
-
-  );
-};
+const Homepage = React.memo(() => (
+  <div>
+    <Nav />
+    <MainHero />
+    <Quakes />
+    <Footer />
+  </div>
+));
 
 const App = () => (
-  <Router>
-    <Switch>
-      <Route path="/" exact component={Homepage} />
-    </Switch>
-  </Router>
+  <>
+    <GlobalStyle />
+    <EarthquakeProvider>
+      <Homepage />
+    </EarthquakeProvider>
+  </>
 );
 
 export default App;

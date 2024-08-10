@@ -1,14 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
+    <!-- Character encoding for the document -->
     <meta charset="UTF-8" />
+
+    <!-- Viewport settings for responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Compatibility mode for Internet Explorer -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Document title -->
     <title>John Fleurimond</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,300;1,400&display=swap" rel="stylesheet">
+
+    <!-- Google Fonts for typography -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Web app manifest for PWA (Progressive Web App) support -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Favicon for the website -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <!-- Link to the favicon (if using HtmlWebpackPlugin) -->
+    <%= htmlWebpackPlugin.tags.headTags %>
+
+    <!-- Preconnect to improve performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
 
   <body>
+    <!-- Main content container -->
     <div id="root"></div>
+
+    <!-- Optionally include JavaScript files here or via Webpack -->
+    <!-- <script src="path/to/your/bundle.js"></script> -->
   </body>
 </html>

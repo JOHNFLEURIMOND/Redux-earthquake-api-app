@@ -1,12 +1,13 @@
-import {Button, OutlineButton } from "index"
-import React from 'react'
+import React from "react";
+import PropTypes from "prop-types";
+import { Button as StyledButton } from "./index";
 
-export default Button = (props) => {
-    return (
-        <div>
-            <Button>
-                {props.Button}
-            </Button>
-        </div>
-    )
-}
+const Button = React.memo(({ children, ...rest }) => {
+  return <StyledButton {...rest}>{children}</StyledButton>;
+});
+
+Button.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default Button;

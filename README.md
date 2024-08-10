@@ -1,71 +1,107 @@
-# :checkered_flag:What It Looks Like :checkered_flag:: 
-https://redux-earthquake-app.netlify.app
-# How It's Made :nut_and_bolt:🔨 :hammer::wrench::
- This application built with React.js, Redux, Webpack.
+# 🌍 Earthquake App
 
- # How It's Works:white_check_mark::
-1.) The client side sends a request to the backend server.
+## Overview 🚀
 
-2.) The backend server response back with a message saying its connected.
+The Earthquake App is a fullstack application designed to provide real-time earthquake data. It uses modern technologies to ensure a seamless user experience and robust backend functionality.
 
-## My Awesome Project && Lessons Learned :mortar_board::
+### Technologies Used
 
-I learned how to get React going without using `create-react-app` By using `Babel` which is code transpiler, it will ES6 Javascript and transpiles it to ES5 Javascript which will be readable for more modern browser. With plugins `preset-env` that helps compiles to ES5 but also takes the browser into play for the environment setup  `preset-react` that helps compiles the jsx syntax, other plugings to help with the syntax tree to help with the source code. 
+- **Frontend:** React.js, Redux, styled-components
+- **Backend:** Node.js
+- **Build Tool:** Webpack
 
-`Webpack` is a module bundler that all of your Javascript files and creates one big file. It will sort all dependencies and configure scope. I defined my entry point at `Main.js`, this is where I tell webpack to started looking for other dependencies, so it can make a dependency graph. It will parse this javascript file and view all imports there and create another Abstract Syntax Tree, kind like babel but looks for import statements depending on other files and sort that and output one big file.
+## Getting Started 🚀
 
-`React` is a library to build composable user interfacts. Composablility being that system design princile of that deals with the inter relationships of components, like how each component contains its own state and being resuseable components. It is a one of the top Javascript frameworks. You don't need to use `Webpack` or `Babel`, you can easily use `npx create-react-app my-app`, `cd my-app`, and `npm start`, tada! you have yourself an app but I wanted to challenge my self.
+To get up and running with this project, follow these steps:
 
-## Redux
+### Prerequisites
 
+Ensure you have the correct versions of Node.js and npm installed. You can check your current versions with:
 
-# Portfolio :open_file_folder::
+```bash
+node -v && npm -v
+```
 
-** :computer:   WEBSITE:** [John Fleurimond](http://johnfleurimond.com)
+### Install Node Version Manager (nvm)
 
-# How To Get It Started :arrow_forward: :
+If you need to install or switch Node.js versions, use `nvm`:
 
-## Installation
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+nvm install 20
+```
 
-1. Clone repo
-2. run `npm install`
+### Clone the Repository
 
-## Available Scripts
+```bash
+git clone {{repository-url}}
+cd {{repository-directory}}
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+## Available Scripts 🎬
 
 In the project directory, you can run:
 
 ### `npm run serve`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:5000](http://localhost:5000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](#running-tests) for more information.
+Runs both the frontend and backend servers concurrently in development mode. Open [http://localhost:8080](http://localhost:8080) to view the app.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the app for production to the `dist` folder. Optimizes the build for the best performance with minified files and hashed filenames.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](#deployment) for more information.
 ### `npm run prettier`
-This corrects the format.
 
-### `npm run eject`
+Formats the codebase according to Prettier configuration.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### `npm run restart`
 
+Cleans up, updates dependencies, and restarts the application:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm run prettier && rm -rf package-lock.json && rm -rf node_modules && npm install && npx npm-check-updates -u && npm install && npm run serve
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### `npm run push`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Cleans up, updates dependencies, and pushes changes to the repository:
+
+```bash
+npm run prettier && rm -rf package-lock.json && rm -rf node_modules && git add . && git commit -m 'Update components and loader' && git push
+```
+
+### `npm run kill`
+
+Kills all running Node.js processes:
+
+```bash
+sudo kill -9 $(ps aux | grep node | grep -v grep | awk '{print $2}')
+```
+
+### `npm run clean`
+
+Cleans npm cache and rebuilds the project:
+
+```bash
+npm cache clean --force && npm run build
+```
+
+## Contributing 🤝
+
+Contributions are welcome! Please read our [contributing guidelines](CONTRIBUTING.md) for more information on how to get involved.
+
+## License 📜
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact 📫
+
+For questions or feedback, please reach out to [Fleur](http://johnfleurimond.com).
+
+---
